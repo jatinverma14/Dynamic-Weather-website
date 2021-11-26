@@ -6,8 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather web app</title>
-
+    
+    {{!-- added cdn for fa-snowflake --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-1/css/all.min.css" integrity="sha512-wDB6AYiYP4FO5Sxieamqy9wtpAY3qdHMqlhZecIEUu1YjkLw5gQf/4ZDgOzmCBAF5SheMjmugkpUSVoUrGbLkQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {{!-- adding css links --}}
+    <link rel="stylesheet" href="/css/nav_style.css">
+    <link rel="stylesheet" href="/css/univ.css">
 </head>
 
 <body>
@@ -15,7 +20,12 @@
         <div class="logo">
             <i class="far fa-snowflake"></i> Weather <i class="far fa-snowflake"></i>
         </div>
-
+        <ul class="nav_links">
+            <li class="item1 item"><a href="/"> Home </a></li>
+            <li class="item2 item"><a href="/weather"> Weather </a></li>
+            <li class="item3 item"><a href="/quotes"> Quotes </a></li>
+            <li class="item4 item"><a href="/contact"> Contact Me </a></li>
+        </ul>
     </div>
 </body>
 
