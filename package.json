@@ -1,0 +1,23 @@
+{
+  "name": "dynamic-weather-website",
+  "version": "1.0.0",
+  "description": "This is a Dynamic weather web application where you can know the weather condtion of any place",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jatinverma14/Dynamic-Weather-website.git"
+  },
+  "author": "Jatin Verma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jatinverma14/Dynamic-Weather-website/issues"
+  },
+  "homepage": "https://github.com/jatinverma14/Dynamic-Weather-website#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.2.0"
+  }
+}
