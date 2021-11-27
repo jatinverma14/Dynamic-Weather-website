@@ -1,3 +1,88 @@
-*{
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: rgb(0, 255, 0);
+    position: fixed;
+    width: 100%;
+    /* text-transform: uppercase; */
+}
+
+.nav_links{
+    display: flex;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.item{
+    list-style: none;
+    padding: 0px 8px;
+    margin: 0rem 0.4rem;
+    transition-duration: 0.5s;
+}
+
+.item a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.item:hover{
+    transform: scale(1.20);
+}
+
+.item:hover a{
+    color: blue;
+}
+
+.logo_head{
+    padding: 0 0.5rem;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.logo:hover .far{
+    transition: all linear;
+    animation: rotate 1.5s linear infinite;
+}
+
+.logo:hover{
+    color: blue;
+}
+
+.item::after, .item::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    border-radius: 100%;
+    left: 0;
+    transform: scaleX(0);
     background-color: blue;
+    transition: transform 0.5s ease-in;
+}
+
+.item::before{
+    bottom: 0;
+    height: 2.5px;
+    transform-origin: bottom;
+}
+
+.item::after{
+    bottom: 0;
+    height: 2.5px;
+    transform-origin: bottom;
+}
+
+.item:hover::after, .item:hover::before{
+    transform: scale(1);
 }
