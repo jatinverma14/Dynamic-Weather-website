@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Estonia&display=swap');
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -8,6 +9,7 @@
     position: fixed;
     letter-spacing: 1px;
     width: 100%;
+    font-family: 'Estonia', cursive;
 }
 
 .nav_links{
