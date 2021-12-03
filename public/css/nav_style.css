@@ -3,9 +3,9 @@
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 3.5rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    background-color: rgb(0, 255, 0);
+    background-color: black;
     position: fixed;
     letter-spacing: 1px;
     width: 100%;
@@ -34,7 +34,7 @@
 
 .item a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: white;
 }
 
 .item:hover{
@@ -42,7 +42,7 @@
 }
 
 .item:hover a{
-    color: blue;
+    color: whitesmoke;
 }
 
 .logo_head{
@@ -63,8 +63,12 @@
     animation: rotate 1.5s linear infinite;
 }
 
-.logo:hover{
-    color: blue;
+.logo a{
+    color: white;
+}
+
+.logo:hover a{
+    color: lightblue;
 }
 
 .item::after, .item::before{
@@ -74,7 +78,7 @@
     border-radius: 100%;
     left: 0;
     transform: scaleX(0);
-    background-color: blue;
+    background-color: green;
     transition: transform 0.5s ease-in;
 }
 

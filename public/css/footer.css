@@ -1,0 +1,12 @@
+footer{
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    background-color: black;
+}
+
+.para{
+    text-align: center;
+    color: #e2edf8;
+    line-height: 2.5rem;
+}
