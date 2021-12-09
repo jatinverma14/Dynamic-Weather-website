@@ -1,8 +1,49 @@
-.content{
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Dancing+Script:wght@600;700&family=Estonia&family=Playfair+Display:wght@500&display=swap');
+.container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     height: 100vh;
+    text-align: center;
     align-items: center;
-    font-size: 3rem;
-    background-color: #e2edf8;
+    background-color: rgb(63, 63, 63);
+    line-height: 3rem;
+    letter-spacing: 1.5px;
+    color: greenyellow;
+}
+
+.container_weather_head{
+    font-family: 'Estonia', cursive;
+    font-size: 3.5rem;
+    text-decoration: wavy;
+    font-weight: bold;
+}
+
+.container-content{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+.container-weather-link a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    color: yellow;
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-family: 'Playfair Display', serif;
+    background-color: black;
+}
+
+.container-weather-link{
+    transition-duration: 0.7s;
+}
+
+.container-weather-link:hover{
+    transform: scale(1.14);
+}
+
+.container-weather-link:hover a{
+    background-color: yellow;
+    color: black;
 }

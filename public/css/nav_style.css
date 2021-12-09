@@ -34,7 +34,7 @@
 
 .item a{
     text-decoration: none;
-    color: white;
+    color: rgb(9, 180, 9);
 }
 
 .item:hover{
@@ -64,7 +64,7 @@
 }
 
 .logo a{
-    color: white;
+    color: rgb(9, 180, 9);
 }
 
 .logo:hover a{
