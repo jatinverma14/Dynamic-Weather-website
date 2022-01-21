@@ -1,0 +1,37 @@
+.weatherContainer{
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.dateDay{
+    display: flex;
+    justify-content: center;
+}
+
+.formForCity{
+    border: 2px solid black;
+    /* width: 20vw; */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: white;
+}
+#cityName, #submitButton{
+    /* border-radius: 15px; */
+    /* padding: 8px 20px 8px 5px; */
+    border-color: transparent;
+    background-color: transparent;
+}
+#cityName{
+    width: 20rem;
+}
+
+#submitButton{
+    /* padding: 7px 10px; */
+    cursor: pointer;
+}

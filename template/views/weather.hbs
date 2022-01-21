@@ -5,7 +5,23 @@
 </head>
 <body>
     {{>nav}}
-
+    <div class="weatherContainer">
+        <div class="cityData">
+            <form class="formForCity">
+                <input type="text" name="city" id="cityName" autocomplete="off" placeholder="Enter your city name">
+                <input type="submit" value="search" id="submitButton">
+            </form>
+        </div>
+        <div class="weatherInfo">
+            <div class="dateDay">
+                <div class="day">TUESDAY</div>
+                <div class="date">14 OCT</div>
+            </div>
+            <div class="mainInfo">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia consequatur facilis in numquam eveniet quis, minima inventore et magnam accusantium blanditiis quasi saepe, sapiente illum nulla, vel est? Reiciendis, quis. Nemo soluta eveniet ullam facere quia ipsam, recusandae aperiam velit dolorem nisi, aspernatur qui provident.
+            </div>
+        </div>
+    </div>
 
     {{>footer}}
 </body>

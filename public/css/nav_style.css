@@ -34,7 +34,7 @@
 
 .item a{
     text-decoration: none;
-    color: rgb(9, 180, 9);
+    color: yellow;
 }
 
 .item:hover{
@@ -64,7 +64,7 @@
 }
 
 .logo a{
-    color: rgb(9, 180, 9);
+    color: yellow;
 }
 
 .logo:hover a{
@@ -78,7 +78,7 @@
     border-radius: 100%;
     left: 0;
     transform: scaleX(0);
-    background-color: green;
+    background-color: white;
     transition: transform 0.5s ease-in;
 }
 
