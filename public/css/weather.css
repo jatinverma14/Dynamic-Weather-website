@@ -30,7 +30,7 @@
     justify-content: space-between;
     border-radius: 15px;
     background-color: white;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     position: relative;
 }
 
@@ -51,7 +51,7 @@
     letter-spacing: 1.2px;
 }
 
-#submitButton{
+.subBut{
     cursor: pointer;
     border-radius: 15px;
     padding: 4px 10px;
@@ -69,6 +69,7 @@
 }
 
 .get_output_here{
+    text-align: center;
     font-size: 1.7rem;
 }
 
@@ -93,11 +94,12 @@
     flex-wrap: wrap;
     margin: 0px 10rem;
     justify-content: center;
+    margin-top: 2rem;
+    display: none;
 }
 
 .heading{
     text-align: center;
     font-size: 1.8rem;
-    margin-bottom: 1rem;
     text-shadow: 0.5px 0.5px 4px black;
 }

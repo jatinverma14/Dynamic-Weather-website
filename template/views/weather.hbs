@@ -7,72 +7,30 @@
     {{>nav}}
     <div class="weatherContainer">
         <div class="dateDay">
-                <div class="day">Tuesday, 14 Oct</div>
+                <div class="day" id="dayDateMonth">Tuesday, 14 Oct</div>
                 {{!-- <div class="date">14 OCT</div> --}}
         </div>
         <div class="cityData">
             <form class="formForCity">
                 <input type="text" name="city" id="cityName" autocomplete="off" placeholder="Enter your city name">
-                <input type="submit" value="Search" id="submitButton">
+                <input type="submit" value="Search" id="submitButton" class="subBut">
             </form>
         </div>
         <div class="weatherInfo">
-            <div class="get_output_here" style="display: none;">Get Your Output Here!</div>
-            <div class="heading">Weather condition in CityName now</div>
-            <div class="mainWeatherInfo">
-            <div class="weatherCommon temp">Temperature: 29<sup>o</sup>C <div> FontAwesome icon </div></div>
-            <div class="weatherCommon min_temp">Minimum Temp: 29<sup>o</sup>C<div> FontAwesome icon </div></div>
-            <div class="weatherCommon max_temp">Maximum Temp: 29<sup>o</sup>C<div> FontAwesome icon </div></div>
-            <div class="weatherCommon temp_feels">Temp Feels like: 29<sup>o</sup>C<div> FontAwesome icon </div></div>
-            <div class="weatherCommon windSpeed">Wind Speed: 29 km/h<div> FontAwesome icon </div></div>
-            <div class="weatherCommon humidity">Humidity: 29 unit</div>
-            <div class="weatherCommon pressure">Pressure: 29 Pa</div>
+            <div class="get_output_here" id="getOutput">Get Your Output Here!</div> {{! heading class to be added--}}
+            <div class="mainWeatherInfo" id="mainWeather">
+            <div class="weatherCommon">Temperature: <span id="temp">29</span><sup>o</sup>C <div> FontAwesome icon </div></div>
+            <div class="weatherCommon">Minimum Temp: <span id="min_temp">29</span><sup>o</sup>C<div> FontAwesome icon </div></div>
+            <div class="weatherCommon">Maximum Temp: <span id="max_temp">29</span><sup>o</sup>C<div> FontAwesome icon </div></div>
+            <div class="weatherCommon">Temp Feels like: <span id="temp_feels">29</span><sup>o</sup>C<div> FontAwesome icon </div></div>
+            <div class="weatherCommon">Wind Speed: <span id="windSpeed">29</span> km/h<div> FontAwesome icon </div></div>
+            <div class="weatherCommon">Humidity: <span id="humidity">29</span> unit</div>
+            <div class="weatherCommon">Pressure: <span id="pressure">29</span> Pa</div>
             </div>
         </div>
     </div>
 
     {{>footer}}
 </body>
+    {{>jsFiles}}
 </html>
-
-{{!-- "coord": {
-        "lon": -0.1257,
-        "lat": 51.5085
-    },
-    "weather": [
-        {
-            "id": 804,
-            "main": "Clouds",
-            "description": "overcast clouds",
-            "icon": "04d"
-        }
-    ],
-    "base": "stations",
-    "main": {
-        "temp": 278.3,
-        "feels_like": 275.77,
-        "temp_min": 276.88,
-        "temp_max": 279.15,
-        "pressure": 1038,
-        "humidity": 84
-    },
-    "visibility": 10000,
-    "wind": {
-        "speed": 3.09,
-        "deg": 310
-    },
-    "clouds": {
-        "all": 100
-    },
-    "dt": 1642846412,
-    "sys": {
-        "type": 2,
-        "id": 2019646,
-        "country": "GB",
-        "sunrise": 1642837951,
-        "sunset": 1642869073
-    },
-    "timezone": 0,
-    "id": 2643743,
-    "name": "London",
-    "cod": 200 --}}
