@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Dancing+Script:wght@600;700&family=Estonia&family=Playfair+Display:wght@500&display=swap');
+
+.contact_container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(230, 230, 230);
+}
+
+.form{
+    padding: 1rem;
+    background-color: white;
+    /* background-color: rgb(230, 230, 230); */
+    border-radius: 10px;
+}
+
+.contact_head{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+.yourName, .yourEmail_Mobile{
+    font-family: 'Playfair Display', serif;
+    display: flex;
+}
+
+.FirstName, .LastName, .email, .phone, .message{
+    font-size: 1.3rem;
+}
+
+.FirstName, .email{
+    margin-right: 5rem;
+    margin-bottom: 0.8rem;
+}
+
+.contactInp{
+    height: 1.8rem;
+    width: 15rem;
+}
+
+::placeholder{
+    color: black;
+    opacity: 0.6;
+}
+
+.message{
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 0.8rem;
+}
+
+.subButton{
+    padding: 0.5px 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: black;
+    color: yellow;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif;
+    font-size: medium;
+    letter-spacing: 1px;
+}
+
+.subButton:hover{
+    box-shadow: 1px 1px 8px grey;
+}
