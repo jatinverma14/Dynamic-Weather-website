@@ -12,8 +12,8 @@
 .form{
     padding: 1rem;
     background-color: white;
-    /* background-color: rgb(230, 230, 230); */
     border-radius: 10px;
+    box-shadow: 1px 4px 17px black;
 }
 
 .contact_head{

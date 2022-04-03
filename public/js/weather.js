@@ -15,7 +15,7 @@ const dayDateMonth = document.getElementById("dayDateMonth");
 
 const getDateDayMonth = () => {
   const d = new Date();
-  const monthInd = d.getMonth() + 1;
+  const monthInd = d.getMonth();
   const monthArr = [
     "JAN",
     "FEB",
