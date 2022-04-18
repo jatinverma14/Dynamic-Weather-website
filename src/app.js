@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const nodeMailer = require("nodemailer");
 const path = require("path");
 const hbs = require("hbs");
+const cred = require("../public/js/cred");
 const { log } = require("console");
 const port = process.env.port || 3000;
 
@@ -40,7 +41,7 @@ app.get("/contact", (req, res) => {
   res.render("contact");
 });
 
-app.post("/contact", (req, res) => {
+app.post("/sendMail", (req, res) => {
   const contactReqOutput = `
     <p>**New contact request**</p>
     <h3>Contact Details</h3>
@@ -52,30 +53,30 @@ app.post("/contact", (req, res) => {
     </ul>
     `;
 
-  var transporter = nodeMailer.createTransport({
+  let transporter = nodeMailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
     secure: true,
     auth: {
+      user: cred.user1,
+      pass: cred.pass,
     },
-    tls: { rejectUnauthorized: false },
   });
 
   // send mail with defined transport object
-  var mailOptions = {
-    from: '"DWW contact" demacc972@gmail.com', // sender address
-    to: "jatinverma1410@gmail.com", // list of receivers
+  let mailOptions = {
+    from: cred.user1, // sender address
+    to: cred.user2, // list of receivers
     subject: "Hello, New msg from DWW!", // Subject line
     html: contactReqOutput,
   };
 
   transporter.sendMail(mailOptions, (err, info) => {
     if (err) {
-      console.log(err + "errrrr");
-      console.log("Err");
+      console.log(err);
     } else {
-      alert("Message sent successfully!");
-      console.log("succ");
+      // alert("Message sent successfully!");
+      // console.log(info.response);
     }
   });
 });

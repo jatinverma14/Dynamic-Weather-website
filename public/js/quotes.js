@@ -9,6 +9,7 @@ var quote;
 const displayQuotes = () => {
   const num = Math.floor(Math.random() * 1630);
   quote = actualData[num].text;
+  console.log(quote);
   auth_name;
   var tempAuthor = actualData[num].author;
   {
@@ -34,7 +35,8 @@ const getQuotesData = async () => {
 newQuote.addEventListener("click", displayQuotes);
 
 const tweet = () => {
-  var tweetQ = `https://twitter.com/intent/tweet?text=${quoteData} ${auth_name}`;
+  const tweetData = `${quote}  ${auth_name}`;
+  var tweetQ = `https://twitter.com/intent/tweet?text=${tweetData}`;
   window.open(tweetQ);
 };
 
