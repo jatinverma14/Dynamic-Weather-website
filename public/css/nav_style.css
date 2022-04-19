@@ -1,99 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Estonia&display=swap');
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 3.5rem;
-    font-size: 1.8rem;
-    font-weight: bold;
-    background-color: black;
-    position: fixed;
-    letter-spacing: 1px;
-    width: 100%;
-    font-family: 'Estonia', cursive;
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Estonia&display=swap");
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  padding: 1.5rem 3.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  z-index: 10;
+  background-color: black;
+  position: fixed;
+  letter-spacing: 1px;
+  width: 100%;
+  font-family: "Estonia", cursive;
 }
-
-.nav_links{
-    display: flex;
-    text-transform: uppercase;
+.nav_links {
+  display: flex;
+  text-transform: uppercase;
 }
-
-.logo{
-    cursor: pointer;
+.logo {
+  cursor: pointer;
 }
-
-.logo a{
-    text-decoration: none;
+.logo a {
+  text-decoration: none;
 }
-
-.item{
-    list-style: none;
-    padding: 0px 8px;
-    margin: 0rem 0.4rem;
-    transition-duration: 0.5s;
+.item {
+  list-style: none;
+  padding: 0px 8px;
+  margin: 0rem 0.4rem;
+  transition-duration: 0.5s;
 }
-
-.item a{
-    text-decoration: none;
-    color: yellow;
+.item a {
+  text-decoration: none;
+  color: yellow;
 }
-
-.item:hover{
-    transform: scale(1.20);
+.item:hover {
+  transform: scale(1.2);
 }
-
-.item:hover a{
-    color: whitesmoke;
+.item:hover a {
+  color: whitesmoke;
 }
-
-.logo_head{
-    padding: 0 0.5rem;
+.logo_head {
+  padding: 0 0.5rem;
 }
-
-@keyframes rotate{
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-.logo:hover .far{
-    transition: all linear;
-    animation: rotate 1.5s linear infinite;
+.logo:hover .far {
+  transition: all linear;
+  animation: rotate 1.5s linear infinite;
 }
-
-.logo a{
-    color: yellow;
+.logo a {
+  color: yellow;
 }
-
-.logo:hover a{
-    color: lightblue;
+.logo:hover a {
+  color: lightblue;
 }
-
-.item::after, .item::before{
-    content: '';
+.item::after,
+.item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-radius: 100%;
+  left: 0;
+  transform: scaleX(0);
+  background-color: white;
+  transition: transform 0.5s ease-in;
+}
+.item::before {
+  bottom: 0;
+  height: 2.5px;
+  transform-origin: bottom;
+}
+.item::after {
+  bottom: 0;
+  height: 2.5px;
+  transform-origin: bottom;
+}
+.item:hover::after,
+.item:hover::before {
+  transform: scale(1);
+}
+.hamburger {
+  display: none;
+  background-color: rgb(219, 219, 25);
+  border-radius: 100%;
+  padding: 6px;
+  cursor: pointer;
+}
+.hamburger div {
+  background-color: rgb(73, 71, 71);
+  border-radius: 20%;
+  width: 2rem;
+  height: 4px;
+  margin: 5px;
+  transition: all 0.4s ease-in-out;
+}
+.hamburger:hover div {
+  background-color: rgb(0, 0, 0);
+}
+.cross-burger .line1 {
+  transform: rotate(-405deg) translate(-5px, 7px);
+}
+.cross-burger .line2 {
+  opacity: 0;
+  transform: translateX(-2rem);
+}
+.cross-burger .line3 {
+  transform: rotate(405deg) translate(-5px, -7px);
+}
+@media screen and (max-width: 760px) {
+  .hamburger {
+    display: block;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .navbar{
+    padding: 1rem 3rem;
+  }
+  .nav_links{
+    flex-direction: column;
+    right: 0;
+    z-index: -1;
     position: absolute;
-    width: 100%;
-    border-radius: 100%;
-    left: 0;
-    transform: scaleX(0);
-    background-color: white;
-    transition: transform 0.5s ease-in;
+    transform: translateX(100%);
+    right: 0;
+    height: 100vh;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.7s ease-in;
+    width: 100vw;
+  }
+  .item:hover {
+    transition-duration: 0.5s;
+    transform: scale(1.14) !important;
+  }
+  .item a {
+    color: white;
+    font-weight: bold;
+    font-size: 170%;
+  }
+  .item:hover a {
+    color: yellow;
+  }
+  .item::after, .item::before{
+    background-color: rgb(255, 255, 255);
+  }
 }
-
-.item::before{
-    bottom: 0;
-    height: 2.5px;
-    transform-origin: bottom;
+.mob-view {
+  transform: translateX(0%);
 }
-
-.item::after{
-    bottom: 0;
-    height: 2.5px;
-    transform-origin: bottom;
-}
-
-.item:hover::after, .item:hover::before{
-    transform: scale(1);
+@media screen and (max-width: 500px) {
+  .nav_links{
+    font-size: 1.4rem;
+  }
 }
