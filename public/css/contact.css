@@ -51,7 +51,6 @@
     font-family: 'Playfair Display', serif;
     margin-bottom: 0.8rem;
 }
-
 .subButton{
     padding: 0.5px 8px;
     cursor: pointer;
@@ -63,7 +62,20 @@
     font-size: medium;
     letter-spacing: 1px;
 }
-
 .subButton:hover{
     box-shadow: 1px 1px 8px grey;
+}
+@media screen and (max-width:750px) {
+    .contactInp{
+        width: 10rem;
+    }
+    .FirstName, .email{
+        margin-right: 4rem;
+    }
+    .contact_head{
+        font-size: 1.1rem;
+    }
+    .yourMessage{
+        width: 24rem;
+    }
 }
