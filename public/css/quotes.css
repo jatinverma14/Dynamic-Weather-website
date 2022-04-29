@@ -69,3 +69,17 @@
     font-family: 'Playfair Display', serif;
     text-shadow: 1px 3px 3px grey;
 }
+@media screen and (max-width: 675px) {
+    .quoteContainer{
+        width: 28rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    .quoteContainer{
+        width: 25rem;
+        height: 17rem;
+    }
+    .quoteData{
+        height: 10rem;
+    }
+}
