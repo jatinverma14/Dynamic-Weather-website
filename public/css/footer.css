@@ -3,7 +3,9 @@ footer{
     width: 100%;
     text-align: center;
     margin-top: auto;
+    position: fixed;
     background-color: black;
+    bottom: 0;
 }
 
 .para{

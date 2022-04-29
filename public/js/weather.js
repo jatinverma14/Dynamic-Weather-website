@@ -2,6 +2,7 @@ const submitButton = document.getElementById("submitButton");
 const getOutput = document.getElementById("getOutput");
 const mainWeather = document.getElementById("mainWeather");
 const cityName = document.getElementById("cityName");
+const cityData = document.getElementById("cityDataId");
 
 const temp = document.getElementById("temp");
 const min_temp = document.getElementById("min_temp");
@@ -83,10 +84,27 @@ submitButton.addEventListener("click", async (e) => {
       pressure.innerText = arrData[0].main.pressure;
       humidity.innerText = arrData[0].main.humidity;
       windSpeed.innerText = arrData[0].wind.speed;
+
+      const scWidth = screen.width;
+      if (scWidth <= 1150 && scWidth >= 670) {
+        cityData.classList.add("width0");
+        cityData.classList.remove("width1");
+        console.log(scWidth);
+        cityData.classList.remove("width2");
+      } else if (scWidth >= 560 && scWidth < 670) {
+        cityData.classList.add("width1");
+        cityData.classList.remove("width0");
+        cityData.classList.remove("width2");
+      } else if (scWidth < 560) {
+        cityData.classList.add("width2");
+        cityData.classList.remove("width1");
+        cityData.classList.remove("width0");
+      }
     } catch (err) {
       mainWeather.style.display = "none";
       getOutput.classList.remove("heading");
       getOutput.innerText = "Please write the name of your city properly!";
+      console.log(err);
     }
   }
 });

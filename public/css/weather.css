@@ -116,3 +116,17 @@
         width: 25rem;
     }
 }
+@media screen and (max-width: 1150px) {
+    .weatherInfo{
+        padding-bottom: 3rem;
+    }
+}
+.width0{
+    margin-top: 18rem;
+}
+.width1{
+    margin-top: 29rem;
+}
+.width2{
+    margin-top: 36rem;
+}
