@@ -6,7 +6,7 @@ const path = require("path");
 const hbs = require("hbs");
 const cred = require("../public/js/cred");
 const { log } = require("console");
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 // bodyparser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
